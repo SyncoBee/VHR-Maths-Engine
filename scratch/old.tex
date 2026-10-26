@@ -1,0 +1,18 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.4in,landscape]{geometry}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\begin{center}
+\textbf{High-Precision VHR Algebraic Reconstruction (PSNR: 38.93 dB, SSIM: 0.9709)}\\[0.8em]
+$$\mathrm{The\ above\ picture\ is\ a\ converted\ version\ of\ a\ } 600\times 360 \mathrm{\ image.\ For\ } m=1,2,\dots,600 \mathrm{\ and\ } n=1,2,\dots,360:$$
+$$\mathrm{rgb}\left(F\left(H_0\left(\frac{m-324}{204},\frac{120-n}{204}\right)\right), F\left(H_1\left(\frac{m-324}{204},\frac{120-n}{204}\right)\right), F\left(H_2\left(\frac{m-324}{204},\frac{120-n}{204}\right)\right)\right), \quad F(x)=\left\lfloor 255e^{-e^{-1000x}}|x|^{e^{-e^{1000(x-1)}}}\right\rfloor$$
+$$H_s(x,y) = \left(1 - \prod_{p=1}^{4}\left(1 - \left(c_{0,p} + c_{1,p}s + c_{2,p}s^2\right)e^{-e^{k_p(U_p(x,y)^2 + V_p(x,y)^2 - 1)}}\right)\right) + C_s(x,y)$$
+$$U_p(x,y) = \frac{(x-x_p)\cos\theta_p + (y-y_p)\sin\theta_p}{a_p}, \qquad V_p(x,y) = \frac{-(x-x_p)\sin\theta_p + (y-y_p)\cos\theta_p}{b_p}$$
+$$C_s(x,y) = \left(\frac{161}{405}+\frac{5}{881}s+\frac{1}{390}s^2\right)\cos\left(\frac{0\pi(204x+324-1/2)}{600}\right)\cos\left(\frac{0\pi(120-204y-1/2)}{360}\right) + \left(\frac{5}{38}-\frac{699}{892}s+\frac{349}{917}s^2\right)\cos\left(\frac{0\pi(204x+324-1/2)}{600}\right)\cos\left(\frac{1\pi(120-204y-1/2)}{360}\right) + \dots \quad (1200\ \mathrm{rationalized\ terms})$$
+\vspace{0.5em}\textbf{Exact Rationalized Primitive Parameters $(p=1,\dots,4)$:}\\[0.4em]
+$$p=1: (x_p, y_p)=\left(\frac{214}{333}, -\frac{469}{857}\right),\ (a_p, b_p)=\left(\frac{6}{17}, \frac{130}{473}\right),\ W_{p,s}=\frac{43}{57}+\frac{69}{181}s-\frac{139}{942}s^2$$
+$$p=2: (x_p, y_p)=\left(\frac{500}{537}, -\frac{316}{305}\right),\ (a_p, b_p)=\left(\frac{587}{908}, \frac{194}{995}\right),\ W_{p,s}=\frac{673}{789}+\frac{226}{875}s-\frac{177}{904}s^2$$
+$$p=3: (x_p, y_p)=\left(-\frac{359}{427}, \frac{93}{638}\right),\ (a_p, b_p)=\left(\frac{93}{452}, \frac{161}{988}\right),\ W_{p,s}=\frac{205}{208}+\frac{131}{921}s-\frac{73}{507}s^2$$
+$$p=4: (x_p, y_p)=\left(-\frac{177}{871}, -\frac{37}{41}\right),\ (a_p, b_p)=\left(\frac{179}{918}, \frac{107}{676}\right),\ W_{p,s}=\frac{716}{735}-\frac{222}{769}s+\frac{137}{919}s^2$$
+\end{center}
+\end{document}
