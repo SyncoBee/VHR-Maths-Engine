@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="90" fill="url(#bgGrad)" />
+
+  <!-- Coordinate Grid Rings -->
+  <circle cx="250" cy="210" r="120" fill="none" stroke="#312e81" stroke-width="2" stroke-dasharray="6 4" />
+  <circle cx="250" cy="210" r="80" fill="none" stroke="#3730a3" stroke-width="1.5" />
+  <line x1="100" y1="210" x2="400" y2="210" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="4 4" />
+  <line x1="250" y1="60" x2="250" y2="360" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Mathematical Curves (Double Exponential / Waveform) -->
+  <path d="M 130 250 Q 190 120, 250 210 T 370 170" fill="none" stroke="url(#orangeGrad)" stroke-width="6" stroke-linecap="round" />
+  <path d="M 130 170 Q 190 300, 250 210 T 370 250" fill="none" stroke="url(#blueGrad)" stroke-width="4" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Core Intersection Node -->
+  <circle cx="250" cy="210" r="7" fill="#ffffff" filter="drop-shadow(0px 0px 8px #38bdf8)" />
+
+  <!-- Branding Text -->
+  <text x="250" y="415" font-family="Segoe UI, sans-serif" font-weight="800" font-size="26" fill="#ffffff" letter-spacing="3" text-anchor="middle">VHR MATHS</text>
+  <text x="250" y="442" font-family="Segoe UI, sans-serif" font-weight="600" font-size="12" fill="#94a3b8" letter-spacing="4" text-anchor="middle">ENGINE STUDIO</text>
+</svg>

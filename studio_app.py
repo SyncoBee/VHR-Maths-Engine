@@ -425,6 +425,14 @@ class VHRProStudioApp:
         self.root.geometry("1620x980")
         self.root.minsize(1280, 800)
 
+        # Set native application window and taskbar icon
+        icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "icon.ico")
+        if os.path.exists(icon_path):
+            try:
+                self.root.iconbitmap(icon_path)
+            except Exception:
+                pass
+
         self.eq_runner = JobRunner("equation-renderer")
         self.img_runner = JobRunner("image-engine")
 

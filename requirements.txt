@@ -3,3 +3,4 @@ scipy>=1.10.0
 pillow>=9.5.0
 matplotlib>=3.7.0
 pytest>=7.0.0
+pyinstaller>=6.0.0
